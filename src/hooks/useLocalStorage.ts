@@ -1,9 +1,7 @@
 import { useCallback, useRef, useState } from 'react';
 
-const STORAGE_KEY =
-  (import.meta as any).env?.VITE_STORAGE_KEY || 'canvas-todo-app';
-const AUTOSAVE_DELAY =
-  Number((import.meta as any).env?.VITE_AUTOSAVE_DELAY) || 300;
+const STORAGE_KEY = import.meta.env.VITE_STORAGE_KEY || 'canvas-todo-app';
+const AUTOSAVE_DELAY = Number(import.meta.env.VITE_AUTOSAVE_DELAY) || 300;
 
 export function useLocalStorage<T>(key: string, initialValue: T) {
   const saveTimeoutRef = useRef<ReturnType<typeof setTimeout>>();

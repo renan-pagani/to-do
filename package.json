@@ -3,7 +3,13 @@
   "description": "Uma aplicação de tarefas em canvas infinito com subtarefas e ferramentas inteligentes",
   "version": "1.0.0",
   "type": "module",
-  "keywords": ["todo", "canvas", "react", "typescript", "productivity"],
+  "keywords": [
+    "todo",
+    "canvas",
+    "react",
+    "typescript",
+    "productivity"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -11,11 +17,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/dompurify": "^3.0.5",
+    "dompurify": "^3.2.6",
+    "lucide-react": "^0.284.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "lucide-react": "^0.284.0"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/node": "^24.0.14",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@typescript-eslint/eslint-plugin": "^6.10.0",
@@ -30,4 +39,4 @@
     "typescript": "^5.2.2",
     "vite": "^4.5.0"
   }
-} 
+}
