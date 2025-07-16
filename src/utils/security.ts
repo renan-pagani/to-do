@@ -1,20 +1,18 @@
 import DOMPurify from 'dompurify';
+import { Todo } from '../types';
 
 export const sanitizeText = (text: string): string => {
   if (!text || typeof text !== 'string') return '';
-  
-  // Remove tags HTML mas preserva quebras de linha
-  return DOMPurify.sanitize(text, { 
+
+  return DOMPurify.sanitize(text, {
     ALLOWED_TAGS: [],
     ALLOWED_ATTR: [],
-    KEEP_CONTENT: true 
+    KEEP_CONTENT: true,
   }).trim();
 };
 
 export const isValidId = (id: string): boolean => {
-  return typeof id === 'string' && 
-         id.length > 0 && 
-         /^[a-f0-9-]+$/.test(id);
+  return typeof id === 'string' && id.length > 0 && /^[a-f0-9-]+$/.test(id);
 };
 
 export const validateTodo = (todo: any): todo is Todo => {
@@ -30,4 +28,4 @@ export const validateTodo = (todo: any): todo is Todo => {
     !isNaN(todo.position.x) &&
     !isNaN(todo.position.y)
   );
-}; 
+};

@@ -24,4 +24,19 @@ export type Tool = 'create' | 'cursor' | 'move';
 export interface Position {
   x: number;
   y: number;
-} 
+}
+
+export interface DragState {
+  isDragging: boolean;
+  draggedIds: string[];
+  startPositions: Record<string, Position>;
+  mouseStart: Position;
+  canvasOffset: Position;
+}
+
+export const CONSTANTS = {
+  APP_VERSION: '1.0.0',
+  MAX_TODOS: 1000,
+  DRAG_THROTTLE_MS: 16,
+  AUTOSAVE_DEBOUNCE_MS: 300,
+} as const;
