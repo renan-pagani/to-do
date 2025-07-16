@@ -1,0 +1,14 @@
+# Build outputs
+dist/
+build/
+
+# Dependencies
+node_modules/
+
+# Generated files
+*.log
+*.tgz
+
+# Config files
+package-lock.json
+yarn.lock 
